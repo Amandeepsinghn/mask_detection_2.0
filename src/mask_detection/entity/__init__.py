@@ -1,0 +1,1 @@
+from src.mask_detection.entity.config_entity import (DataIngestionConfig,model_training_config)

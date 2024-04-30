@@ -1,0 +1,2 @@
+from mask_detection.components.data_ingestion import DataIngestion
+from mask_detection.components.model_trained import Base_model

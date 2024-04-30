@@ -1,0 +1,1 @@
+from src.mask_detection.config.configuration import ConfigurationManager

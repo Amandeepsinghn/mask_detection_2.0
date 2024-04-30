@@ -1,0 +1,7 @@
+img_size: 224
+data_yaml: artifacts/data_ingestion/data.yaml
+mode : train
+model : yolov8s.pt 
+epochs : 1
+plots : True
+task : detect
