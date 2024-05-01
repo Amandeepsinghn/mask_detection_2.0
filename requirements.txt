@@ -13,5 +13,5 @@ types-PyYAML
 scipy
 Flask
 Flask-Cors
-ultralytics==8.0.20
--e .
+ultralytics
+#-e .
