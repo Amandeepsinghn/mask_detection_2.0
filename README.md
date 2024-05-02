@@ -1,5 +1,7 @@
 # NOTE BECAUSE OF THE LESS COMPUTATIONAL POWER I HAVE TRAINED MY MODEL(YOLO) USING GOOGLE COLAB
 
+339712787583.dkr.ecr.us-east-1.amazonaws.com/mask_detection
+
 
 Workflow 
 

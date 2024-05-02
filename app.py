@@ -47,18 +47,20 @@ def predictRoute():
         
         recent_addition=os.listdir('runs/detect')[-1]
         
-        time.sleep(5)
+
         
     # Read the contents of the file
-        with open(f"{(os.path.abspath('runs/detect'))}\predict{recent_addition[-1]}\inputImage.jpg",'rb') as f:
+        with open(f"{(os.path.abspath('runs/detect'))}\predict\inputImage.jpg",'rb') as f:
             data=f.read()
 
     # Save the contents to 'data/img.jpg'
         with open(os.path.join('data','img.jpg'), 'wb') as f:
             f.write(data)
+        
+        os.system("rmdir /s /q runs\\detect")
             
             
-        time.sleep(5)
+
             
     
         openencodebase64=encodeImageIntoBase64("data/img.jpg")
@@ -68,6 +70,24 @@ def predictRoute():
         return jsonify(result)
     except Exception as e:
         raise(AppException(e,sys))
+    
+    
+@app.route("/live", methods=['GET']) 
+def predictLive():
+    try:
+        command="yolo task=detect mode=predict conf=0.25 source=0 model=\"artifacts/prepare_base_model/best.pt\" "
+        
+        subprocess.run(command,shell=True)
+        
+        os.system("rmdir /s /q runs\\detect")
+        
+        return 'camera is starting'
+        
+        
+        
+        
+    except Exception as e:
+        AppException(e,sys)
     
     
 if __name__=="__main__":
