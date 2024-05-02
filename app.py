@@ -45,7 +45,6 @@ def predictRoute():
         # Execute the YOLO command
         subprocess.run(command, shell=True)
         
-        recent_addition=os.listdir('runs/detect')[-1]
         
 
         
