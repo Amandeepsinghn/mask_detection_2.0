@@ -1,4 +1,8 @@
+# NOTE BECAUSE OF THE LESS COMPUTATIONAL POWER I HAVE TRAINED MY MODEL(YOLO) USING GOOGLE COLAB
+
+
 Workflow 
+
 
 1. Update config.yaml
 2. Update secrets.yaml [Optional]

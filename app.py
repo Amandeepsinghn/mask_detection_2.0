@@ -47,19 +47,21 @@ def predictRoute():
         
         recent_addition=os.listdir('runs/detect')[-1]
         
+        time.sleep(5)
+        
     # Read the contents of the file
-        with open(f"runs/detect/{recent_addition}/", 'rb') as f:
-            save = f.read()
+        with open(f"{(os.path.abspath('runs/detect'))}\predict{recent_addition[-1]}\inputImage.jpg",'rb') as f:
+            data=f.read()
 
     # Save the contents to 'data/img.jpg'
         with open(os.path.join('data','img.jpg'), 'wb') as f:
-            f.write(save)
+            f.write(data)
             
             
-        time.sleep(10)
+        time.sleep(5)
             
     
-        openencodebase64=encodeImageIntoBase64(f"runs/detect/{recent_addition}/")
+        openencodebase64=encodeImageIntoBase64("data/img.jpg")
         result={'image':openencodebase64.decode('utf-8')}
     
 
