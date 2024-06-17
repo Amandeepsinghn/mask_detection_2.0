@@ -25,14 +25,14 @@ https://github.com/Amandeepsinghn/mask_detection_2.0/assets/137553469/f841efd7-3
 STEPS:
 Clone the repository
 ```bash
-  https://github.com/Amandeepsinghn/Resume_Type.git
+  https://github.com/Amandeepsinghn/mask_detection_2.0.git
 ```
 STEP 01- Create a conda environment after opening the repository
 ```bash
-  conda create -n resume python=3.8 -y
+  conda create -n mask python=3.8 -y
 ```
 ```bash
-  conda activate resume
+  conda activate mask
 ```
 STEP 02- install the requirements
 ```bash
@@ -76,7 +76,7 @@ STEP 02- install the requirements
 ```
 3. Create ECR repo to store/save docker image
 ```bash
-- Save the URI: 566373416292.dkr.ecr.us-east-1.amazonaws.com/flight_price
+- Save the URI: 566373416292.dkr.ecr.us-east-1.amazonaws.com/mask
 ```
 4. Create EC2 machine (Ubuntu)
 
